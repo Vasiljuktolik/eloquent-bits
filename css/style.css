@@ -1,0 +1,911 @@
+/*General style*/
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+body, p, a, span, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Nunito', sans-serif;
+}
+
+/*Custom style for Blocks*/
+.top-image{
+  background: url(../images/slidefull.jpg) no-repeat;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.header-menu{
+  height: 70px;  
+}
+.banner{
+  height: auto;  
+  text-align: center;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+.eb-logo {
+  width: 148px;
+  margin-left: 63px;
+}
+
+/*Style for Header Block Start*/
+.brand{ 
+  display: box;
+  width: 148px;
+  float: left;
+  margin-top: 34px;
+  margin-left: 62px;
+}
+.menu {     
+    float: right;    
+    margin-top: 34px;
+    margin-right: 62px;
+}
+.menu__links-item {
+    display: inline-block;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 30px;
+    padding: 0 10px;    
+    text-decoration: none;
+}
+.menu__links-item:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+
+ a:focus{
+    color: #fff !important;
+}
+
+/*Style for gamburger icon*/
+
+.menu__icon {
+    display: none;
+    width: 45px;
+    height: 35px;
+    position: relative;
+    cursor: pointer;
+}
+.menu__icon span {
+    display: block;
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    background: #fff;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    -ms-transition: .25s ease-in-out;
+}
+.menu__icon span:nth-child(1) {
+    top: 0px;
+}
+.menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
+    top: 13px;
+}
+.menu__icon span:nth-child(4) {
+    top: 26px;
+}
+@media screen and (max-width: 992px) {
+  
+  div.fon-menu{
+    background-color: rgba(62, 185, 95, 0.8);
+    z-index: 999;    
+    width: 100%;
+    position: fixed;
+    height: 100px;
+  }
+  .menu__icon{
+    display: inline-block;   
+    position: fixed;
+    z-index: 998;
+  }  
+  .menu__links {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 52px;
+    background-color: rgba(62, 185, 95, 0.8);
+    z-index: 997;
+    overflow: auto;
+    opacity: 0;
+    pointer-events: none;
+    cursor: default;
+  }  
+  .menu__links-item {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .brand{ 
+  display: box;
+  width: 148px;
+  float: left;
+  margin-top: 41px;
+  margin-left: 20px;
+  position: fixed;
+  }
+  .eb-logo {
+  width: 148px;
+  margin-left: 10px;
+  } 
+
+  .menu.menu_state_open .menu__icon span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+  .menu.menu_state_open .menu__icon span:nth-child(2) {
+    margin-top: 30px;
+    transform: rotate(45deg);
+     z-index: 1000;
+     background: #fff;
+     -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+  }
+  .menu.menu_state_open .menu__icon span:nth-child(3) {
+    margin-top: 30px;
+    transform: rotate(-45deg);
+    z-index: 1000;
+    background: #fff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+  }
+  .menu.menu_state_open .menu__icon span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 30%;
+  }    
+}
+.menu.menu_state_open .menu__links {
+    opacity: 1; 
+    pointer-events: auto;
+    cursor: pointer;    
+}
+/*Style for gamburger icon Finish*/
+.banner h1{
+  font-weight: 200;
+  font-size: 60px;
+  line-height: 70px;   
+}
+.banner p{
+  font-weight: 200;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 992px) {
+  .banner h1{
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+    .banner h1{
+    font-weight: 200;
+    font-size: 50px;
+    line-height: 50px;
+    padding-top: 0px; 
+  }
+  .banner p{
+    font-weight: 200;
+    font-size: 20px;
+  }
+  .menu {     
+    margin-right: 40px;
+    margin-top: 14px;
+  }
+  .brand {  
+  margin-left: 0px;
+  margin-top: 20px;
+  } 
+  div.fon-menu{    
+    height: 65px;
+  }   
+}
+/*Style for Banner Block Finish*/
+
+/*Style for Services Block Start*/
+.services-text{
+  display: block;
+  text-align: center;
+  height: auto;  
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.services-text h3{
+  font-size: 35px;
+  font-weight: 400;
+}
+.services-text p{
+  font-size: 21px;
+  font-weight: 300;
+}
+
+/* Custom font-icon Start*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?rco3nf');
+  src:  url('../fonts/icomoon.eot?rco3nf#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?rco3nf') format('truetype'),
+    url('../fonts/icomoon.woff?rco3nf') format('woff'),
+    url('../fonts/icomoon.svg?rco3nf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-1:before {
+  content: "\e900";
+}
+.icon-2:before {
+  content: "\e901";
+}
+.icon-3:before {
+  content: "\e902";
+}
+.icon-4:before {
+  content: "\e903";
+}
+.icon-5:before {
+  content: "\e904";
+}
+.icon-6:before {
+  content: "\e905";
+}
+/* Custom font-icon Finish*/
+
+/*Custom style tabs*/
+/* Base container of tabs*/
+.tabs {
+  min-width: 320px;
+  /*max-width: 1400px;*/
+  padding: 0px;
+  margin: 0 auto;
+  text-align: center;
+}
+/*Style for section with content*/
+.tabs>section {
+  display: none;
+  padding: 15px;
+  background: #fafafa;
+  border-top: 1px solid #ddd;
+  width: 100%;
+}
+.tabs>section>p {
+  margin: 0 0 5px;
+  line-height: 1.5;
+  color: #383838;
+  /* Adding animation with vendor */
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+/*  Description propriater opacity of animation*/
+ 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Hidden checkbox */
+.tabs>input {
+  display: none;
+  position: absolute; 
+  
+}
+/* Style of tabs*/
+.tabs>label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 10px 30px 10px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #666666;
+  margin: 0px 20px;
+}
+
+.tabs>label>span {
+    font-size: 70px;
+  }
+
+  
+/* Font-icon Unicode */
+.tabs>label:before {
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  margin-right: 10px;
+  
+}
+.icon-1, .icon-2, .icon-3, .icon-4, .icon-5, .icon-6 {
+  font-size: 5em;
+}
+/*Hover style of tabs*/
+ 
+.tabs>label:hover {
+  color: #3eb95f;
+  cursor: pointer;
+  border-bottom: 3px solid #3eb95f;
+}
+/*Active style of tabs*/
+.tabs>input:checked+label {
+  color: #3eb95f;
+  border-top: 1px solid #fff;
+  border-bottom: 3px solid #3eb95f;
+  background: #fff;
+}
+/*Activation section with :checked*/
+#tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4, #tab5:checked~#content-tab5, #tab6:checked~#content-tab6 {
+  display: block;
+}
+
+@media screen and (max-width: 1010px) {
+  .tabs>label {
+  
+  font-size: 18px;
+  padding: 10px 0px 10px 0px;
+  margin: 0px 9px;  
+}
+
+.tabs>label>span {
+    font-size: 50px;
+  }
+  
+}
+
+/*Hidden text for small screen*/
+ 
+@media screen and (max-width: 680px) {
+  .tabs>label {
+    font-size: 0;
+
+  }
+   .tabs>label>p{
+    display: none;
+    
+  }
+  .tabs>label>span {
+    font-size: 50px;
+  }
+  
+ .tabs>label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+   .tabs>label>span {
+    font-size: 40px;
+    } 
+    
+}
+/*Change padding for small screen*/
+@media screen and (max-width: 420px) {
+  .tabs>label {
+    padding: 15px;
+    padding: 10px 1px 10px 1px;
+  margin: 0px 9px;    
+  }
+  .tabs>label>span {
+    font-size: 30px;
+    }  
+
+}
+.single-content{
+  max-width: 824px;
+  margin: 0 auto !important;
+  padding-top: 60px;
+  padding-bottom: 60px;
+ }
+
+ .single-content span{
+  text-align: right;
+  font-size: 24px;
+  font-weight: 700;
+  
+ }
+ .single-content p{
+  text-align: left;
+  font-size: 21px;
+  font-weight: 300;
+ }
+ @media screen and (max-width: 680px) {
+  .single-content{
+  padding-top: 20px;
+  padding-bottom: 10px;
+ }
+}
+
+/*Style for Services Block Finish*/
+
+/*Style for Portfolio Block Start*/
+.container{
+  margin: 0 auto;
+}
+.portfolio-text{  
+  height: auto;
+  padding-top: 75px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+}
+.portfolio-text h3{
+  font-size: 35px;
+  font-weight: 400;
+  text-align: center;
+}
+.portfolio-text p{
+  font-size: 21px;
+  font-weight: 300;
+  text-align: center;
+}
+.portfolio-item {
+    margin-bottom: 25px;
+    max-width: 1176px;
+    text-align: center;
+    /*width: auto;*/
+}
+.portfolio-item img{
+  margin: 0 auto;
+  width: 100%;  
+}
+@media screen and (max-width: 992px) {
+  .container{
+    margin: 0 auto;
+  }
+  .portfolio-item img{
+   /* margin: 0 auto;*/
+    width: 100%;  
+  }
+}
+/*Animation effect style Start*/
+.effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.effect a {
+  text-decoration: none !important;
+}
+
+.effect .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #3eb95f;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  margin-right: 15px;
+  margin-left: 15px;
+  
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  z-index: 2;
+}
+.effect .caption h4 {  
+  margin: 0px;
+  font-size: 25px;
+  font-weight: 300;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.effect .caption h4:before{
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+}
+.effect .caption h4:before {
+  width: 53px;
+  bottom: 10px;
+}
+.effect .caption .text {  
+  padding: 0px 10px;
+  font-size: 16px;
+  line-height: 22px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.effect .caption .text p {
+  margin-bottom: 15px;
+  margin-top: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 1.8em;
+}
+
+.effect .caption .text p:last-child {
+  margin-bottom: 0px;
+}
+
+.effect .caption a.btn {
+  color: #fff;
+  display: inline-block;  
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 30px 8px 30px;    
+
+  -webkit-transition: background 0.2s linear 0s;
+  -o-transition: background 0.2s linear 0s;
+  -moz-transition: background 0.2s linear 0s;
+  transition: background 0.2s linear 0s;
+
+  margin-bottom: 30px; 
+  position: relative;
+  background-color: #fff;
+  color: #3eb95f;
+}
+
+.effect .caption a.btn:hover {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+
+@media screen and (max-width: 490px) {
+  .effect .caption h4 {  
+  margin: 0px;
+  font-size: 20px;
+  font-weight: 300;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  position: relative;
+  }
+  .effect .caption h4:before{
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #fff;
+  }
+  .effect .caption h4:before {
+    width: 53px;
+    bottom: 10px;
+  }
+  .effect .caption .text {  
+    padding: 0px 10px;
+    font-size: 18px;
+    line-height: 22px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .effect .caption .text p {
+    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 15px;  
+    line-height: 1.4em;
+  }
+}
+
+/* effect #7 styles */
+.effect.eff-7 .caption {
+  opacity: 0;
+  width: auto;
+}
+
+.effect.eff-7 .caption h4,
+.effect.eff-7 .caption .text,
+.effect.eff-7 .caption a.btn {
+  opacity: 0;
+  -moz-transform: scale(2);
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  -moz-transition: all 0.2s linear 0.1s;
+  -webkit-transition: all 0.2s linear 0.1s;
+  transition: all 0.2s linear 0.1s;
+}
+
+.effect.eff-7:hover .caption {
+  opacity: 1;
+  -moz-transition: all 0.5s linear 0s;
+  -webkit-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
+}
+
+.effect.eff-7:hover .caption h4,
+.effect.eff-7:hover .caption .text,
+.effect.eff-7:hover .caption a.btn {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+/*Animation effect style Finish*/
+/*Style for Portfolio Block Finish*/
+
+/*Style for Team Block Start*/
+
+.team {
+  text-align: center;
+}
+.fill{
+ 
+  margin-left: 150px;
+}
+.jeff{
+  
+  margin-right: 150px;
+}
+
+.fill-part h3, .fill-part p{ 
+  margin-left: 150px;
+}
+.jeff-part h3, .jeff-part p{ 
+  margin-right: 150px;
+}
+
+@media screen and (max-width: 992px) {
+  .fill{
+   
+    margin-left: 0px;
+  }
+  .jeff{
+    
+    margin-right: 0px;
+  }
+
+  .fill-part h3, .fill-part p{ 
+    margin-left: 0px;
+  }
+  .jeff-part h3, .jeff-part p{ 
+    margin-right: 0px;
+  }
+}
+
+.team-text{  
+  height: auto;
+  padding-top: 75px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+}
+.team-text h3{
+  font-size: 35px;
+  font-weight: 400;
+  text-align: center;
+}
+.team-text p{
+  font-size: 21px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.team{
+  padding-bottom: 75px;
+}
+
+/*Style for Team Block Finish*/
+
+/*Style for Subscribe Block Start*/
+.subscribe-text{  
+  height: auto;
+  padding-top: 75px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+.subscribe-text h3{
+  font-size: 35px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+}
+.subscribe-text p{
+  font-size: 21px;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+}
+.subscribe{
+  padding-bottom: 75px;
+  background: #3eb95f;
+  min-width: 100%;   
+}
+.subbutton{
+  background: #d4d4d4 !important;
+}
+.subbutton:hover{
+  color:#3eb95f !important;
+  border: 1px solid #fff ;
+}
+
+.input-group{
+  max-width: 424px !important;
+  /*width: 424px;*/
+  margin: 0 auto;
+}
+/*Style for Subscribe Block Finish*/
+
+/*Style for Contact Block Start*/
+.contact-text{  
+  height: auto;
+  padding-top: 75px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+.contact-text h3{
+  font-size: 35px;
+  font-weight: 400;
+  text-align: center;
+}
+.contact-text p{
+  font-size: 21px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.contact-list{  
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.contact-list-1{
+  text-align: right;
+}
+.contact-list-3{
+  text-align: left;
+}
+@media screen and (max-width: 992px) {
+  .contact-list-1, .contact-list-3{
+  text-align: center;
+  }
+}
+.contact-list span{  
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+.contact-list i{
+  font-size: 1.2em;
+  color: #3eb95f;
+}
+.contactform{
+  max-width: 626px;
+  margin-top: 30px;
+}
+.form-bord{
+  border-radius: 0px !important;
+  border: 1px solid #666666 !important;
+  color: #989898 !important;
+}
+.arrow{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.arrow-link{
+ text-align: center;
+}
+a.arrow-link{
+  background: url(../images/arrow.png);
+  display: block;
+  width: 62px;
+  height: 62px;
+  margin: 0 auto;
+}
+a.arrow-link:hover{
+  background: url(../images/arrowhoverline.png);
+}
+/*Style for Contact Block Finish*/
+/*Style for Fotter Block Start*/
+.footer-menu{
+  background: #444;
+  min-height: 80px;
+  height: auto;
+    
+}
+.footer-menu span{
+  color: #fff;
+  margin-left: 65px;
+  margin-top: 32px;
+  float: left;
+}
+.footer_menu__links{
+  font-size: 16px;
+  font-weight: 300;
+  text-align: right;
+  margin-top: 32px;
+  margin-right: 62px;
+
+}
+.footer_menu__links-item{
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 23px;
+  color: #fff;
+}
+.footer_menu__links-item{
+  color: #fff !important;
+}
+@media screen and (max-width: 680px) {  
+  .footer-menu span{     
+    text-align: center !important;
+    margin-left: 0px;
+  }
+  .footer_menu__links{  
+    text-align: center;
+    margin-top: 62px;
+    margin-bottom: 25px;
+    margin-right: 0;
+  }   
+}
+
+body{
+  overflow-x:hidden;
+}
+/*Style for Fotter Block Finish*/
